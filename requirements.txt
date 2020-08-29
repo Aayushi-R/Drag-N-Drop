@@ -1,0 +1,16 @@
+eventlet
+Flask
+Flask-SocketIO
+Flask-WTF
+flask_sqlalchemy
+flask_migrate
+flask_login
+greenlet
+itsdangerous
+Jinja2
+MarkupSafe
+python-engineio
+python-socketio
+Werkzeug
+wheel
+WTForms

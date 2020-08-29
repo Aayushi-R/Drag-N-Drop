@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Drag N Drop</title>
+        <script type="text/javascript" src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="/static/js/chat.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/js/dragdrop.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="/static/css/chat.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="chat-header">
+            <h1 class="app-header">Drag N Drop</h1>
+			<h3 class="current-user-header">You: {{ name }}</h3>
+            <h5 id="online-header">0 online:</h5>
+            <div id="online-users"></div>
+            <br/><br/>
+            <script>const currentUsername = "{{ name }}";</script>
+        </div>
+        <div class="chatbox">
+            <div id="chat-div" class="chats">
+                <ul id="chat-list">
+                </ul>
+            </div>
+        </div>
+
+        <div class="chat-creation">
+            <input id="chat-input" size="80" placeholder="Place your thoughtful messages here!" onkeydown="userTyping(event)"><br><br>
+            <button id="actions" disabled>Place an ACTION here!</button><br><br>
+            <select id="category-selector">
+            </select>
+            <div id="category-section">
+            </div>
+        </div>
+    </body>
+</html>
